@@ -34,7 +34,15 @@ public class FlopStatsRunner implements Runnable {
         dealer.shuffle();
         Util.handleHole(hand.toSet(), dealer);
         Hand holeFlop = FiveCardHand.of(hand.toSet(), dealer.flop(), false);
+        // ---------------------------------
         Map<Statistic, Boolean> stats = TexasScoreUtil.flopStats(holeFlop);
+        /** TOOD::
+         * This map has length either 7,8 or 10
+         *
+         *  Method will put a 'true' in for ACE_HIGH Even when a set is present.
+         *  Don't think this should happen or should it???
+         */
+
         Map<Statistic, Double> stat = new HashMap<>();
         for (Map.Entry entry : stats.entrySet()) {
             if ( (Boolean)entry.getValue()) {
@@ -43,6 +51,8 @@ public class FlopStatsRunner implements Runnable {
                 stat.put(((Statistic)entry.getKey()), 0.0);
             }
         }
+
+        stat.put(Statistic.NUMBER_OF_RUNS, 1.0);
 
         TexasScoreManager.addToStatContainer(stat);
     }

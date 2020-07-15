@@ -65,7 +65,7 @@ public class TexasScoreManager extends ScoreManager {
         handleResults(pool, DataType.EQUITY);
     }
 
-    public static void flopStatsRunner(Pair<Card> hand) {
+    public static void getFlopStats(Pair<Card> hand) {
 
         ExecutorService pool = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
@@ -104,8 +104,11 @@ public class TexasScoreManager extends ScoreManager {
     public static synchronized void addToStatContainer(Map<Statistic, Double> stats) {
         stats.forEach((key, value) -> {
             flopStats.compute(key, (k, val) -> {
+                if (val == null) {
+                    return value;
+                }
                 if (value.doubleValue() > 0.0) {
-                    return val + 1;
+                    return val + 1.0;
                 } else {
                     return val;
                 }

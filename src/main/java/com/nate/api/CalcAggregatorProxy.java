@@ -45,19 +45,19 @@ public class CalcAggregatorProxy {
         return new ResponseEntity<>("hello world", HttpStatus.OK);
     }
 
-    @PostMapping("/hand-equity")
-    public static ResponseEntity<?> twoCardEquityCalc(@RequestParam(value = "firstHand") @Valid Pair<Card> first, @RequestParam(value = "secondHand") @Valid Pair<Card> second, @RequestParam(value = "thirdHand") @Valid Pair<Card> third) {
-
-
-        return new ResponseEntity<>("hello world", HttpStatus.OK);
-    }
-
-    @PostMapping("/hand-equity")
-    public static ResponseEntity<?> twoCardEquityCalc(@RequestParam(value = "firstHand") @Valid Pair<Card> first, @RequestParam(value = "secondHand") @Valid Pair<Card> second, @RequestParam(value = "thirdHand") @Valid Pair<Card> third, @RequestParam(value = "fourthHand") @Valid Pair<Card> fourth) {
-
-
-        return new ResponseEntity<>("hello world", HttpStatus.OK);
-    }
+//    @PostMapping("/hand-equity")
+//    public static ResponseEntity<?> twoCardEquityCalc(@RequestParam(value = "firstHand") @Valid Pair<Card> first, @RequestParam(value = "secondHand") @Valid Pair<Card> second, @RequestParam(value = "thirdHand") @Valid Pair<Card> third) {
+//
+//
+//        return new ResponseEntity<>("hello world", HttpStatus.OK);
+//    }
+//
+//    @PostMapping("/hand-equity")
+//    public static ResponseEntity<?> twoCardEquityCalc(@RequestParam(value = "firstHand") @Valid Pair<Card> first, @RequestParam(value = "secondHand") @Valid Pair<Card> second, @RequestParam(value = "thirdHand") @Valid Pair<Card> third, @RequestParam(value = "fourthHand") @Valid Pair<Card> fourth) {
+//
+//
+//        return new ResponseEntity<>("hello world", HttpStatus.OK);
+//    }
 
     @PostMapping("/flop-stats")
     public static ResponseEntity<?> flopStats(@RequestParam(value = "firstVal") int firstVal, @RequestParam(value = "secondVal") int secondVal, @RequestParam(value = "suited") boolean suited) {
@@ -76,7 +76,7 @@ public class CalcAggregatorProxy {
 
         Pair<Card> hand = new Pair(first, second);
 
-        TexasScoreManager.flopStatsRunner(hand);
+        TexasScoreManager.getFlopStats(hand);
 
         return new ResponseEntity<>("Hello World", HttpStatus.OK);
     }
