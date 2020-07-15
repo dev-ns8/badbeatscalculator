@@ -10,6 +10,7 @@ import com.nate.model.enums.Suit;
 import com.nate.util.scoring.Hand;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public final class TexasScoreUtil {
 
@@ -92,7 +93,7 @@ public final class TexasScoreUtil {
         results.put(Statistic.TWO_PAIR, isTwoPair(flop.toSet()));
         if (isTwoPair(flop.toSet())) {
             results.put(Statistic.TWO_PAIR, true);
-            List<Card> sorted = splitHand(flop.toSet(), 15); // Should return 3 cards first two being pairs
+            List<Card> sorted = splitHand(flop.toSet(), MadeHand.TWO_PAIR.value); // Should return 3 cards first two being pairs
             Card nonPair = sorted.get(sorted.size() -1);
             if (sorted.get(0).value > nonPair.value) {
                 results.put(Statistic.OVER_PAIR, true);
@@ -105,9 +106,73 @@ public final class TexasScoreUtil {
                 results.put(Statistic.LOW_PAIR, true);
             }
         } else if (isPair(flop.toSet())) {
-            List<Card> sorted = splitHand(flop.toSet(), 14); // first 2 elements paired, next 3 elements un-paired
+            List<Card> sorted = splitHand(flop.toSet(), MadeHand.PAIR.value); // first 2 elements paired, next 3 elements un-paired
+            if (sorted.get(0).value >= sorted.get(1).value) {
+                results.put(Statistic.OVER_PAIR, true);
+            } else if (sorted.get(0).value > sorted.get(sorted.size()-1).value) {
+                results.put(Statistic.MIDDLE_PAIR, true);
+            } else {
+                results.put(Statistic.LOW_PAIR, true);
+            }
+        } else {
+            // No pair
+            List<Card> sorted = splitHand(flop.toSet(), MadeHand.ACE_HIGH.value);
+            if (sorted.get(0).value == Card.ACE_CLUB.value) {
+                results.put(Statistic.ACE_HIGH, true);
+            }
+            results.put(Statistic.FLUSH_DRAW, hasFlushDraw(flop.toSet()));
+            results.put(Statistic.NUT_FLUSH_DRAW, hasNutFlushDraw(flop.toSet()));
+            results.put(Statistic.OPEN_END_DRAW, hasOESD(flop.toSet()));
+            /** calculate if every check from above returned false and if so, add a "true" to
+             *  {@Code results} for "no made hand"
+             */
+
+
         }
         return results;
+    }
+
+    private static boolean hasOESD(Set<Card> cards) {
+        if (isStraight(cards.stream().collect(Collectors.toList()), 4)) {
+            //TODO:: Possible to have an OESD and a Gutshot Straight draw
+            return true;
+        }
+        return false;
+    }
+
+    private static boolean hasFlushDraw(Set<Card> cards) {
+        HashMap<Suit, Integer> suits = new HashMap<>();
+        boolean hasDraw = false;
+        for (Card card : cards) {
+            if (suits.containsKey(card.suit)) {
+                int numSeen = suits.get(card.suit);
+                if (numSeen == 3) {
+                    hasDraw = true;
+                    break;
+                }
+                suits.put(card.suit, numSeen + 1);
+            } else {
+                suits.put(card.suit, 1);
+            }
+        }
+
+        return hasDraw;
+    }
+
+    private static boolean hasNutFlushDraw(Set<Card> cards) {
+        if (hasFlushDraw(cards)) {
+            return hasAce(cards);
+        }
+        return false;
+    }
+
+    private static boolean hasAce(Set<Card> cards) {
+        for (Card card : cards) {
+            if (card.value == Card.ACE_CLUB.value) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private static int compareHands(Set<Card> firstFive, Set<Card> secondFive) throws Exception {

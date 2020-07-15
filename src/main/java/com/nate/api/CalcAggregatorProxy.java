@@ -5,7 +5,9 @@ import com.nate.model.entities.stats.KeyedHand;
 import com.nate.model.enums.Card;
 import com.nate.model.enums.Suit;
 import com.nate.structure.Pair;
+import com.nate.util.scoring.ScoreManager;
 import com.nate.util.scoring.impl.TexasScoreManager;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,6 +20,9 @@ import java.util.Random;
 
 @RestController
 public class CalcAggregatorProxy {
+
+    @Autowired
+    private ScoreManager scoreManager;
 
     @RequestMapping("/")
     public String index() {
@@ -69,7 +74,7 @@ public class CalcAggregatorProxy {
             second = Card.getCard(secondVal, suits.get(rand.nextInt(3)));
         }
 
-        KeyedHand hand = KeyedHand.of(first, second, null);
+        Pair<Card> hand = new Pair(first, second);
 
         TexasScoreManager.flopStatsRunner(hand);
 

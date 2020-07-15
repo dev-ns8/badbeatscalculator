@@ -1,22 +1,21 @@
 package com.nate.util.scoring.impl;
 
-import com.nate.model.entities.stats.KeyedHand;
 import com.nate.model.entities.stats.Statistic;
 import com.nate.model.enums.Card;
 import com.nate.structure.Pair;
 import com.nate.util.concurrent.FlopStatsRunner;
 import com.nate.util.concurrent.Runner;
+import com.nate.util.scoring.ScoreManager;
 
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
 
 import static com.nate.model.entities.SimResults.*;
 
-public class TexasScoreManager {
+public class TexasScoreManager extends ScoreManager {
 
     private final static int ITERATIONS = 1000;
 
@@ -47,16 +46,7 @@ public class TexasScoreManager {
             }
         }
 
-        pool.shutdown();
-
-        try {
-            pool.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
-            System.out.println("Counter: " + getCounter());
-            printResults(getResults());
-        } catch (InterruptedException e) {
-            System.out.println("Shutting down");
-            System.out.println("Shut down!!!");
-        }
+        handleResults(pool, DataType.EQUITY);
     }
 
     public static void twoHandEquity(Pair<Card> first, Pair<Card> second, Set<Card> board) {
@@ -72,17 +62,7 @@ public class TexasScoreManager {
             }
         }
 
-        pool.shutdown();
-
-        try {
-            pool.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
-            System.out.println("Counter: " + getCounter());
-            printResults(getResults());
-        } catch (InterruptedException e) {
-            System.out.println("Shutting down");
-            System.out.println("Shut down!!!");
-        }
-
+        handleResults(pool, DataType.EQUITY);
     }
 
     public static void flopStatsRunner(Pair<Card> hand) {
@@ -100,17 +80,7 @@ public class TexasScoreManager {
             }
         }
 
-        pool.shutdown();
-
-        try {
-            pool.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
-            System.out.println("FlopStatsRunner :: BREAK");
-
-        } catch (InterruptedException e) {
-            System.out.println("Interruped Exception!");
-            e.printStackTrace();
-        }
-
+        handleResults(pool, DataType.FLOP);
     }
 
     public static synchronized void updateCounter() {

@@ -1,7 +1,13 @@
 package com.nate.util.scoring;
 
+import com.nate.util.scoring.impl.DataType;
+import com.nate.util.scoring.impl.TexasScoreManager;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+
+import static com.nate.util.scoring.impl.TexasScoreManager.getResults;
 
 /**
  * Class will aggregate scores (Stats + equities?) of hands.  This means it will take either
@@ -13,7 +19,27 @@ import java.util.concurrent.Executors;
 public abstract class ScoreManager {
 
 
-    abstract void handleResult();
+
+    public static void handleResults(ExecutorService pool, DataType type) {
+
+        pool.shutdown();
+
+        try {
+
+            pool.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
+
+            if (type.equals(DataType.FLOP)) {
+                //TODO:: Handle the results
+                System.out.println("FlopStatsRunner :: BREAK");
+            } else if (type.equals(DataType.EQUITY)) {
+                TexasScoreManager.printResults(getResults());
+            }
+        } catch (InterruptedException e) {
+            System.out.println("InterruptedException :: ScoreManager :: RequestType: " + type);
+            e.printStackTrace();
+        }
+
+    }
 
     private void submitJob(Runnable runable, int iterations) {
 
