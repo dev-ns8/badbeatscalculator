@@ -2,14 +2,15 @@ package com.nate.structure;
 
 import com.nate.model.enums.Card;
 
+import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
 public class Pair<T> {
 
-    private T first;
-    private T second;
+    @NotNull private T first;
+    @NotNull private T second;
 
     public Pair(T t1, T t2) {
         first = t1;

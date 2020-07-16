@@ -4,7 +4,6 @@ import com.nate.util.scoring.impl.DataType;
 import com.nate.util.scoring.impl.TexasScoreManager;
 
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 import static com.nate.util.scoring.impl.TexasScoreManager.getResults;
@@ -18,8 +17,6 @@ import static com.nate.util.scoring.impl.TexasScoreManager.getResults;
 
 public abstract class ScoreManager {
 
-
-
     public static void handleResults(ExecutorService pool, DataType type) {
 
         pool.shutdown();
@@ -29,8 +26,7 @@ public abstract class ScoreManager {
             pool.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
 
             if (type.equals(DataType.FLOP)) {
-                //TODO:: Handle the results
-                System.out.println("FlopStatsRunner :: BREAK");
+                TexasScoreManager.printFlopStats();
             } else if (type.equals(DataType.EQUITY)) {
                 TexasScoreManager.printResults(getResults());
             }
@@ -40,23 +36,4 @@ public abstract class ScoreManager {
         }
 
     }
-
-    private void submitJob(Runnable runable, int iterations) {
-
-        ExecutorService pool = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
-
-        for (int i = 0; i < iterations; i++) {
-//            try {
-//                Runnable thread = runable.create();
-//
-//            } catch () {
-//
-//            }
-
-        }
-
-    }
-
-
-
 }

@@ -101,7 +101,12 @@ public class TexasScoreManager extends ScoreManager {
         }
     }
 
-    public static synchronized void addToStatContainer(Map<Statistic, Double> stats) {
+    public static void printFlopStats() {
+        System.out.println("print results");
+    }
+
+    public static void addToStatContainer(Map<Statistic, Double> stats) {
+        System.out.println("done");
         stats.forEach((key, value) -> {
             flopStats.compute(key, (k, val) -> {
                 if (val == null) {
