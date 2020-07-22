@@ -2,35 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c67047da-0ec0-4f90-8504-e836b7800351" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_8_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nate/api/HandWrapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/nate/api/Pair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/org_springframework_boot_spring_boot_starter_web_2_2_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/org_springframework_boot_spring_boot_starter_web_2_2_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/EquityData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HandListRequest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/badbeatscalculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/badbeatscalculator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nate/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nate/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nate/api/CalcAggregatorProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nate/api/CalcAggregatorProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nate/api/HandWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nate/api/HandWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nate/api/Pair.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/FlopData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/FlopData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nate/model/enums/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nate/model/enums/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nate/model/enums/Suit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nate/model/enums/Suit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nate/structure/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nate/structure/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nate/util/concurrent/FlopStatsRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nate/util/concurrent/FlopStatsRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nate/util/scoring/ScoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nate/util/scoring/ScoreManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nate/util/scoring/impl/TexasScoreManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nate/util/scoring/impl/TexasScoreManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bbc.env.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bbc.env.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/nate/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nate/Application.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/nate/api/CalcAggregatorProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nate/api/CalcAggregatorProxy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nate/model/entities/stats/KeyedHand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nate/model/entities/stats/KeyedHand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nate/model/entities/stats/MetricContainer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nate/model/entities/stats/MetricContainer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nate/model/entities/stats/StatContainer.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/nate/model/enums/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nate/model/enums/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nate/model/enums/Suit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nate/model/enums/Suit.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/nate/structure/Pair$STRENGTH.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nate/structure/Pair$STRENGTH.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/nate/structure/Pair.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nate/structure/Pair.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nate/util/ScoreUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nate/util/ThreadPool.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/nate/util/concurrent/FlopStatsRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nate/util/concurrent/FlopStatsRunner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nate/util/concurrent/Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nate/util/concurrent/Runner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nate/util/scoring/FiveCardHand$HandIterator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nate/util/scoring/FiveCardHand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nate/util/scoring/Hand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nate/util/scoring/Hand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MainTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,177 +36,135 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/badbeatscalculator$Application.ic" NAME="Application Coverage Results" MODIFIED="1594916161369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5187266">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="FiveCardHand.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/scoring/impl/FiveCardHand.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ScoreManager.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/scoring/ScoreManager.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" selection-start-line="6" selection-end-line="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TexasScoreUtil.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/scoring/impl/TexasScoreUtil.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="780">
-                  <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CalcAggregatorProxy.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/api/CalcAggregatorProxy.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="241">
-                  <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="HandWrapper.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/api/HandWrapper.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="2" selection-start-line="2" selection-end-line="2" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#241#242#0" expanded="true" />
-                    <element signature="e#275#276#0" expanded="true" />
-                    <element signature="e#341#342#0" expanded="true" />
-                    <element signature="e#386#387#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="WebAsyncTask.java" pinned="false" current-in-tab="false">
-            <entry file="jar://$USER_HOME$/.ideaLibSources/spring-web-5.2.3.RELEASE-sources.jar!/org/springframework/web/context/request/async/WebAsyncTask.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="339">
-                  <caret line="68" column="11" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
-                  <folding>
-                    <element signature="e#5684#5685#0" expanded="true" />
-                    <element signature="e#5725#5726#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="FiveCardHand.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/scoring/impl/FiveCardHand.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TexasScoreManager.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/scoring/impl/TexasScoreManager.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="128">
-                  <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#3324#3325#0" expanded="true" />
-                    <element signature="e#3375#3376#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Statistic.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/Statistic.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="FlopStatsRunner.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/concurrent/FlopStatsRunner.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="570">
-                  <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Util.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/concurrent/Util.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="540">
-                  <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Pair.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/structure/Pair.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Pair.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/api/Pair.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="KeyedHand.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/KeyedHand.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Card.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/enums/Card.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-461">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TexasScoreManager.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/scoring/impl/TexasScoreManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3325#3326#0" expanded="true" />
+                <element signature="e#3376#3377#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Runner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/concurrent/Runner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="735">
+              <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#757#758#0" expanded="true" />
+                <element signature="e#799#800#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HandData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/HandData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlopStatsRunner.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/concurrent/FlopStatsRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScoreManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/scoring/ScoreManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CalcAggregatorProxy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/api/CalcAggregatorProxy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="60" column="31" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlopData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/FlopData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="61" selection-start-line="61" selection-end-line="61" />
+              <folding>
+                <element signature="e#415#416#0" expanded="true" />
+                <element signature="e#449#450#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImmutableMap.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/google/collections/google-collections/1.0/google-collections-1.0.jar!/com/google/common/collect/ImmutableMap.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KeyedHand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/KeyedHand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
         <option value="spring-beans.schema" />
+        <option value="Go File" />
         <option value="Class" />
       </list>
     </option>
@@ -223,6 +176,7 @@
       <find>splitHand</find>
     </findStrings>
   </component>
+  <component name="GOROOT" path="/usr/local/Cellar/go/1.12.2/libexec" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -233,19 +187,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/nate/CalcAggregatorProxy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nate/model/entities/exceptions/CardsNotFoundException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nate/model/entities/SimResults.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/nate/util/concurrent/Util.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nate/api/Hand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nate/api/Hole.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nate/util/concurrent/Runner.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nate/util/ThreadPool.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nate/model/enums/Card.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nate/util/ScoreUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nate/util/TexasScoreUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nate/util/scoring/FiveCardHand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nate/util/scoring/impl/FiveCardHand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/HandData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/FlopData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/KeyedHand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nate/util/concurrent/CustomRunable.java" />
         <option value="$PROJECT_DIR$/src/main/java/playground/MainPlayground.java" />
@@ -255,15 +206,23 @@
         <option value="$PROJECT_DIR$/src/test/java/MainTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nate/util/scoring/Hand.java" />
         <option value="$PROJECT_DIR$/src/test/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nate/util/concurrent/FlopStatsRunner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nate/util/scoring/ScoreManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nate/util/scoring/impl/TexasScoreManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nate/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nate/structure/Pair.java" />
         <option value="$PROJECT_DIR$/src/main/resources/bbc.env.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/nate/api/Pair.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nate/model/enums/Suit.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/HandListRequest.json" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties.go" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nate/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nate/structure/Pair.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nate/api/HandWrapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nate/model/enums/Card.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nate/util/concurrent/FlopStatsRunner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nate/util/scoring/impl/TexasScoreManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nate/util/scoring/ScoreManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/FlopData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nate/api/CalcAggregatorProxy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/EquityData.java" />
       </list>
     </option>
   </component>
@@ -282,11 +241,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-1919" />
-    <option name="y" value="-136" />
-    <option name="width" value="1920" />
-    <option name="height" value="961" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="777" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -343,27 +301,28 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="nate" type="462c0819:PsiDirectoryNode" />
-              <item name="structure" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="badbeatscalculator" type="b2602c69:ProjectViewProjectNode" />
               <item name="badbeatscalculator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="badbeatscalculator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="badbeatscalculator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="badbeatscalculator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="badbeatscalculator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="nate" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="badbeatscalculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="badbeatscalculator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="nate" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+              <item name="stats" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -375,6 +334,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="GO_FMT" value="false" />
@@ -388,6 +348,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -436,6 +397,21 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$" />
+      <directory value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -506,7 +482,7 @@
       <workItem from="1594760496948" duration="2167000" />
       <workItem from="1594784250908" duration="7318000" />
       <workItem from="1594826727330" duration="1197000" />
-      <workItem from="1594838704623" duration="11891000" />
+      <workItem from="1594838704623" duration="32560000" />
     </task>
     <task id="LOCAL-00001" summary="Cleaned up prev repo">
       <created>1594788724786</created>
@@ -522,14 +498,21 @@
       <option name="project" value="LOCAL" />
       <updated>1594790661922</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&#10;Changes">
+      <created>1594877112072</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1594877112072</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44202000" />
+    <option name="totallyTimeSpent" value="64871000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1919" y="-136" width="1920" height="961" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -542,7 +525,7 @@
       <window_info id="Structure" order="1" sideWeight="0.5037037" side_tool="true" weight="0.14696486" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5428241" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.47453704" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.3275463" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
@@ -551,11 +534,13 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.375" />
+      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32960597" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3287037" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4962963" visible="true" weight="0.14696486" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4962963" visible="true" weight="0.36833602" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3287037" />
       <window_info id="Learn" order="2" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -565,7 +550,6 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3287037" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,22 +568,69 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/nate/util/scoring/impl/TexasScoreManager.java</url>
-          <line>104</line>
+          <line>115</line>
           <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/nate/api/CalcAggregatorProxy.java</url>
-          <line>50</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/FlopData.java</url>
+          <line>17</line>
           <properties />
-          <option name="timeStamp" value="25" />
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/FlopData.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/FlopData.java</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nate/api/CalcAggregatorProxy.java</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="26" />
+      <option name="time" value="49" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>ImmutableMap.copyOf(s)</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>java.util.HashMap</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>s.get(Statistic.QUADS)</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>java.util.HashMap</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>FlopData.of(real)</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>java.util.HashMap</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>FlopData.of();</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>java.util.HashMap</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>hand.toString()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>val + 1</expression-string>
         <language-id>JAVA</language-id>
@@ -623,25 +654,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/scoring/impl/TexasScoreUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="89" column="85" selection-start-line="89" selection-start-column="85" selection-end-line="89" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/enums/Street.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/exceptions/SplitHandLengthException.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/exceptions/HandCardsErrorException.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/enums/Position.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -660,13 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -699,59 +704,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/api/Hole.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/concurrent/Runner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/enums/Suit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/FlopData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/KeyedHand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/playground/Recursion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/HandData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/MetricContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -779,13 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/enums/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3480">
-          <caret line="232" selection-start-line="232" selection-end-line="232" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/scoring/impl/DataType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -797,13 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/concurrent/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -834,42 +776,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/Statistic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/concurrent/FlopStatsRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/scoring/impl/TexasScoreManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3324#3325#0" expanded="true" />
-            <element signature="e#3375#3376#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/scoring/ScoreManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -940,31 +846,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home/src.zip!/java/lang/reflect/Method.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="496" selection-start-line="496" selection-end-line="496" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/api/HandWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#275#276#0" expanded="true" />
-            <element signature="e#341#342#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -975,19 +860,186 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/enums/Suit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/concurrent/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/api/HandWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/enums/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-461">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/MetricContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/HandListRequest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/structure/Pair.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="88">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/concurrent/FlopStatsRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/KeyedHand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/scoring/ScoreManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/collections/google-collections/1.0/google-collections-1.0.jar!/com/google/common/collect/ImmutableMap.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/FlopData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="e#415#416#0" expanded="true" />
+            <element signature="e#449#450#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/api/CalcAggregatorProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+        <state relative-caret-position="131">
+          <caret line="60" column="31" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/HandData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/Statistic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/model/entities/stats/EquityData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/concurrent/Runner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#757#758#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nate/util/scoring/impl/TexasScoreManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3325#3326#0" expanded="true" />
+            <element signature="e#3376#3377#0" expanded="true" />
           </folding>
         </state>
       </provider>

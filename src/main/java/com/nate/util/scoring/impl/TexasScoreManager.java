@@ -1,5 +1,6 @@
 package com.nate.util.scoring.impl;
 
+import com.nate.model.entities.stats.KeyedHand;
 import com.nate.model.entities.stats.Statistic;
 import com.nate.model.enums.Card;
 import com.nate.structure.Pair;
@@ -12,6 +13,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 import static com.nate.model.entities.SimResults.*;
 
@@ -20,7 +22,7 @@ public class TexasScoreManager extends ScoreManager {
     private final static int ITERATIONS = 1000;
 
     private static Map<String, Integer> results = new ConcurrentHashMap<>();
-    private static Map<Statistic, Double> flopStats = new ConcurrentHashMap<>();
+    private static Map<Statistic, Integer> flopStats = new ConcurrentHashMap<>();
     public static volatile int counter = 0;
 
     static {
@@ -65,7 +67,7 @@ public class TexasScoreManager extends ScoreManager {
         handleResults(pool, DataType.EQUITY);
     }
 
-    public static void getFlopStats(Pair<Card> hand) {
+    public static KeyedHand getFlopStats(Pair<Card> hand) {
 
         ExecutorService pool = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
@@ -80,7 +82,16 @@ public class TexasScoreManager extends ScoreManager {
             }
         }
 
-        handleResults(pool, DataType.FLOP);
+        pool.shutdown();
+
+        try {
+            pool.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
+        } catch (InterruptedException e) {
+            System.out.println("getFlopStats() :: Interrupted Exception");
+            e.printStackTrace();
+        }
+
+        return calcResults(hand, flopStats);
     }
 
     public static synchronized void updateCounter() {
@@ -105,15 +116,15 @@ public class TexasScoreManager extends ScoreManager {
         System.out.println("print results");
     }
 
-    public static void addToStatContainer(Map<Statistic, Double> stats) {
+    public static void addToStatContainer(Map<Statistic, Integer> stats) {
         System.out.println("done");
         stats.forEach((key, value) -> {
             flopStats.compute(key, (k, val) -> {
                 if (val == null) {
                     return value;
                 }
-                if (value.doubleValue() > 0.0) {
-                    return val + 1.0;
+                if (value.doubleValue() > 0) {
+                    return val + 1;
                 } else {
                     return val;
                 }

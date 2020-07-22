@@ -1,5 +1,7 @@
 package com.nate.structure;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.google.gson.annotations.SerializedName;
 import com.nate.model.enums.Card;
 
 import javax.validation.constraints.NotNull;
@@ -9,9 +11,15 @@ import java.util.Set;
 
 public class Pair<T> {
 
-    @NotNull private T first;
-    @NotNull private T second;
+    @NotNull
+    @SerializedName("first")
+    private T first;
 
+    @NotNull
+    @SerializedName("second")
+    private T second;
+
+    @JsonCreator
     public Pair(T t1, T t2) {
         first = t1;
         second = t2;

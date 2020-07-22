@@ -43,16 +43,16 @@ public class FlopStatsRunner implements Runnable {
          *  Don't think this should happen or should it???
          */
 
-        Map<Statistic, Double> stat = new HashMap<>();
+        Map<Statistic, Integer> stat = new HashMap<>();
         for (Map.Entry entry : stats.entrySet()) {
             if ( (Boolean)entry.getValue()) {
-                stat.put(((Statistic)entry.getKey()), 1.0);
+                stat.put(((Statistic)entry.getKey()), 1);
             } else {
-                stat.put(((Statistic)entry.getKey()), 0.0);
+                stat.put(((Statistic)entry.getKey()), 0);
             }
         }
 
-        stat.put(Statistic.NUMBER_OF_RUNS, 1.0);
+        stat.put(Statistic.NUMBER_OF_RUNS, 1);
 
         TexasScoreManager.addToStatContainer(stat);
     }

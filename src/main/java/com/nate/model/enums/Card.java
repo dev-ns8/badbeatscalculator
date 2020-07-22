@@ -1,6 +1,8 @@
 package com.nate.model.enums;
 
 
+import com.google.gson.annotations.SerializedName;
+
 public enum Card {
 
     ACE_HEART(12, Suit.HEART),
@@ -68,7 +70,9 @@ public enum Card {
     KING_SPADE(11, Suit.SPADE),
     KING_CLUB(11, Suit.CLUB);
 
+    @SerializedName("value")
     public int value;
+    @SerializedName("suit")
     public Suit suit;
 
     Card(int value, Suit suit) {

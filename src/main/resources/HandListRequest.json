@@ -1,0 +1,31 @@
+[
+  {
+    "first" : {
+      "value" : 12,
+      "suit" :  {
+        "name" : "heart"
+      }
+    },
+
+    "Second" : {
+      "value" : 12,
+      "suit" : {
+        "name" : "spade"
+      }
+    }
+  },
+  {
+    "first" : {
+      "value" : 8,
+      "suit" : {
+        "name" : "club"
+      }
+    },
+    "second" : {
+      "value" : 9,
+      "suit" : {
+        "name" : "club"
+      }
+    }
+  }
+]
