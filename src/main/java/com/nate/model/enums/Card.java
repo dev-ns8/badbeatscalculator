@@ -80,6 +80,21 @@ public enum Card {
         this.suit = suit;
     }
 
+    public static Card getCard(int value, String suit) {
+        switch (suit) {
+            case "heart":
+                return getCard(value, 0);
+            case "diamond":
+                return getCard(value, 1);
+            case "spade":
+                return getCard(value, 2);
+            case "club":
+                return getCard(value, 3);
+            default:
+                return getCard(value, 0);
+        }
+    }
+
     public static Card getCard(int value, int suit) {
         switch (value) {
             case 12:

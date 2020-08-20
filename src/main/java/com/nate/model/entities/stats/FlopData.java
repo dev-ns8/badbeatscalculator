@@ -1,6 +1,8 @@
 package com.nate.model.entities.stats;
 
 import com.google.common.collect.ImmutableMap;
+import com.nate.model.enums.Card;
+import com.nate.structure.Pair;
 import lombok.Getter;
 
 import java.io.Serializable;
@@ -11,17 +13,18 @@ public class FlopData implements Serializable {
 
     private static final long serialVersionUID = 6253534059769L;
 
-    @Getter
-    private final Map<Statistic, Double> stats;
+    @Getter private final Pair<Card> key;
+    @Getter private final Map<Statistic, Double> stats;
 
-    private FlopData(Map<Statistic, Double> stats) {
+    private FlopData(Map<Statistic, Double> stats, Pair<Card> key) {
         this.stats = stats;
+        this.key = key;
     }
 
     public static FlopData of(double quads, double fullHouse, double flush, double straight,
                               double set, double twoPair, double overPair, double middlePair,
                               double lowPair, double aceHigh, double noHand, double flushDraw,
-                              double nfd, double oesd, double numRuns) {
+                              double nfd, double oesd, double numRuns, Pair<Card> key) {
         Map<Statistic, Double> s = new HashMap<>();
         s.put(Statistic.QUADS, quads);
         s.put(Statistic.FULL_HOUSE, fullHouse);
@@ -38,10 +41,10 @@ public class FlopData implements Serializable {
         s.put(Statistic.NUT_FLUSH_DRAW, nfd);
         s.put(Statistic.OPEN_END_DRAW, oesd);
         s.put(Statistic.NUMBER_OF_RUNS, numRuns);
-        return new FlopData(s);
+        return new FlopData(s, key);
     }
 
-    public static FlopData of(Map<Statistic, Double> s) {
+    public static FlopData of(Map<Statistic, Double> s, Pair<Card> key) {
         Map<Statistic, Double> map = new HashMap<>();
         map.put(Statistic.QUADS, s.get(Statistic.QUADS));
         map.put(Statistic.FULL_HOUSE, s.get(Statistic.FULL_HOUSE));
@@ -58,7 +61,7 @@ public class FlopData implements Serializable {
         map.put(Statistic.NUT_FLUSH_DRAW, s.get(Statistic.NUT_FLUSH_DRAW));
         map.put(Statistic.OPEN_END_DRAW, s.get(Statistic.OPEN_END_DRAW));
         map.put(Statistic.NUMBER_OF_RUNS, s.get(Statistic.NUMBER_OF_RUNS));
-        FlopData data = new FlopData(map);
+        FlopData data = new FlopData(map, key);
         return data;
     }
 

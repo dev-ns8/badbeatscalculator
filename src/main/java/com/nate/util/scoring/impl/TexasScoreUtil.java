@@ -7,6 +7,7 @@ import com.nate.model.entities.stats.Statistic;
 import com.nate.model.enums.Card;
 import com.nate.model.enums.MadeHand;
 import com.nate.model.enums.Suit;
+import com.nate.structure.Pair;
 import com.nate.util.scoring.Hand;
 
 import java.util.*;
@@ -44,6 +45,20 @@ public final class TexasScoreUtil {
         return compareHands(firstFive, secondFive);
     }
 
+//    public static Map<Pair<Card>, Place> compareHands(List<Pair<Card>> hands, Set<Card> board) {
+//        List<Set<Card>> handsBoard = new ArrayList<>();
+//        List<Set<Card>> bestFive = new ArrayList<>();
+//        for (Pair<Card> cards : hands) {
+//            Set<Card> c = new HashSet<>(board);
+//            c.addAll(cards.toSet());
+//            bestFive.add(sevenToBestFive(c));
+//        }
+//
+//        compareHands()
+//
+//
+//    }
+
     public static int score(Set<Card> cards) {
         return scoreHand(new ArrayList<>(cards));
     }
@@ -61,36 +76,16 @@ public final class TexasScoreUtil {
      * @return
      */
     public static Map<Statistic, Boolean> flopStats(Hand flop) {
-        Map<Statistic, Boolean> results = new TreeMap<>(Collections.reverseOrder());
-        int score = scoreHand(flop.toList());
 
-        /**
-         * Checks to perform:
-         *
-         * 1 quads
-         * 2 fullHouse
-         * 3 flush
-         * 4 straight
-         * 5 set
-         * 6 two pair
-         *
-         * TODO::
-         * 7 overPair
-         * 8 middlePair
-         * 9 lowPair
-         * 10 aceHigh
-         * 11 noHand
-         * 12 flushDraw
-         * 13 nfd
-         * 14 oesd
-         * 15 numberOfRuns
-         */
+        Map<Statistic, Boolean> results = new TreeMap<>(Collections.reverseOrder());
+
         results.put(Statistic.QUADS, isFourOfAKind(flop.toSet()));
         results.put(Statistic.FULL_HOUSE, isFullHouse(flop.toSet()));
         results.put(Statistic.FLUSH, isFlush(flop.toList()));
         results.put(Statistic.STRAIGHT, isStraight(flop.toList(), flop.getHandSize()-1));
         results.put(Statistic.SET, isThreeOfAkind(flop.toSet()));
         results.put(Statistic.TWO_PAIR, isTwoPair(flop.toSet()));
+
         if (isTwoPair(flop.toSet())) {
             results.put(Statistic.TWO_PAIR, true);
             List<Card> sorted = splitHand(flop.toSet(), MadeHand.TWO_PAIR.value); // Should return 3 cards first two being pairs
@@ -123,12 +118,15 @@ public final class TexasScoreUtil {
             results.put(Statistic.FLUSH_DRAW, hasFlushDraw(flop.toSet()));
             results.put(Statistic.NUT_FLUSH_DRAW, hasNutFlushDraw(flop.toSet()));
             results.put(Statistic.OPEN_END_DRAW, hasOESD(flop.toSet()));
-            /** calculate if every check from above returned false and if so, add a "true" to
-             *  {@Code results} for "no made hand"
-             */
-
-
         }
+
+        boolean noHand = true;
+        for (Map.Entry entry : results.entrySet()) {
+            if ((boolean)entry.getValue()) {
+                noHand = false;
+            }
+        }
+        results.put(Statistic.NO_HAND, noHand);
         return results;
     }
 

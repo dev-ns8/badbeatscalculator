@@ -3,6 +3,7 @@ package com.nate.util.concurrent;
 import com.nate.model.entities.Dealer;
 import com.nate.model.entities.stats.Statistic;
 import com.nate.model.enums.Card;
+import com.nate.structure.Pair;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -58,14 +59,14 @@ public class Util {
         return r;
     }
 
-    static Set<Card> handleHole(Set<Card> curr, Dealer dealer) {
+    static Set<Card> handleHole(Pair<Card> curr, Dealer dealer) {
         if (curr == null) {
             Set<Card> r = new HashSet<>();
             r.add(dealer.dealCard());
             r.add(dealer.dealCard());
             return r;
         } else {
-            Set<Card> copy = new HashSet<>(curr);
+            Set<Card> copy = new HashSet<>(curr.toSet());
             if (copy.size() < 2) {
                 while (copy.size() < 2) {
                     dealer.getCards(copy);

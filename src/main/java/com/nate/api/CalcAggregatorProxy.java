@@ -3,7 +3,10 @@ package com.nate.api;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import com.nate.model.entities.stats.EquityData;
+import com.nate.model.entities.stats.FlopData;
 import com.nate.model.entities.stats.KeyedHand;
 import com.nate.model.enums.Card;
 import com.nate.model.enums.Suit;
@@ -46,7 +49,7 @@ public class CalcAggregatorProxy {
 
         Pair<Card> hand = new Pair(first, second);
 
-        KeyedHand data = TexasScoreManager.getFlopStats(hand);
+        FlopData data = TexasScoreManager.getFlopStats(hand);
 
         System.out.println("test");
 
@@ -54,13 +57,18 @@ public class CalcAggregatorProxy {
     }
 
     @PostMapping("/hand-equity")
-    public static ResponseEntity<?> getHandEquity(String hands) {
-        Gson gson = new Gson();
-        Type listType = new TypeToken<ArrayList<Pair>>(){}.getType();
-        List<Pair<Card>> handList = gson.fromJson(hands, listType);
-        TexasScoreManager.twoHandEquity(handList.get(0), handList.get(1), null);
-        System.out.println("hello");
-        return new ResponseEntity<>("hello world", HttpStatus.OK);
+    public static ResponseEntity<?> getHandEquity(@RequestParam(value = "hands") String hands) {
+        GsonBuilder builder = new GsonBuilder();
+        builder.registerTypeAdapter(HandWrapper.class, new HandListDeserializer());
+//        builder.registerTypeAdapter(Card.class, new CardDeserializer());
+        Gson gson = builder.create();
+        HandWrapper wrapper = gson.fromJson(hands, HandWrapper.class);
+        Type listType = new TypeToken<ArrayList<Pair<Card>>>(){}.getType();
+//        List<Pair<Card>> handList = gson.fromJson(hands, listType);
+
+//        EquityData data = TexasScoreManager.twoHandEquity(handList.get(0), handList.get(1), null);
+        String data = null;
+        return new ResponseEntity<>(data, HttpStatus.OK);
     }
 
 
@@ -68,12 +76,6 @@ public class CalcAggregatorProxy {
 
 
 
-    @GetMapping("/flop-test")
-    public static ResponseEntity<?> flopTest() {
-
-        return new ResponseEntity<>("hello world", HttpStatus.OK);
-
-    }
 
     @PostMapping("/hand")
     public static void hand(String hand) throws JsonProcessingException {
@@ -94,21 +96,5 @@ public class CalcAggregatorProxy {
         System.out.println("test");
         return new ResponseEntity<>("hello world", HttpStatus.OK);
     }
-
-
-
-//    @PostMapping("/hand-equity")
-//    public static ResponseEntity<?> twoCardEquityCalc(@RequestParam(value = "firstHand") @Valid Pair<Card> first, @RequestParam(value = "secondHand") @Valid Pair<Card> second, @RequestParam(value = "thirdHand") @Valid Pair<Card> third) {
-//
-//
-//        return new ResponseEntity<>("hello world", HttpStatus.OK);
-//    }
-//
-//    @PostMapping("/hand-equity")
-//    public static ResponseEntity<?> twoCardEquityCalc(@RequestParam(value = "firstHand") @Valid Pair<Card> first, @RequestParam(value = "secondHand") @Valid Pair<Card> second, @RequestParam(value = "thirdHand") @Valid Pair<Card> third, @RequestParam(value = "fourthHand") @Valid Pair<Card> fourth) {
-//
-//
-//        return new ResponseEntity<>("hello world", HttpStatus.OK);
-//    }
 
 }

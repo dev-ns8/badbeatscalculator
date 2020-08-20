@@ -1,6 +1,7 @@
 package com.nate;
 
 import com.google.gson.Gson;
+import com.nate.model.entities.stats.EquityData;
 import com.nate.model.enums.Card;
 import com.nate.structure.Pair;
 import com.nate.util.scoring.impl.TexasScoreManager;
@@ -28,20 +29,28 @@ public class Application {
 
             TexasScoreManager.getFlopStats(first);
 
+        } else if (args[0].equals("-it")) {
+            TexasScoreManager manager = TexasScoreManager.create();
+            long start = System.currentTimeMillis();
+            EquityData data = TexasScoreManager.twoHandEquity(null, null, null);
+            long stop = System.currentTimeMillis();
+            long duration = stop - start;
+            System.out.println("Time: " + duration + "ms");
+
         } else {
             SpringApplication.run(Application.class, args);
         }
     }
 
-    @Configuration
-    public class AppConfig extends WebMvcConfigurationSupport {
-        @Override
-        public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-            GsonHttpMessageConverter msgConverter = new GsonHttpMessageConverter();
-            Gson gson = new Gson();
-            msgConverter.setGson(gson);
-            converters.add(msgConverter);
-        }
-    }
+//    @Configuration
+//    public class AppConfig extends WebMvcConfigurationSupport {
+//        @Override
+//        public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+//            GsonHttpMessageConverter msgConverter = new GsonHttpMessageConverter();
+//            Gson gson = new Gson();
+//            msgConverter.setGson(gson);
+//            converters.add(msgConverter);
+//        }
+//    }
 
 }

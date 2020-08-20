@@ -1,5 +1,6 @@
 package com.nate.util.scoring;
 
+import com.nate.model.entities.stats.EquityData;
 import com.nate.model.entities.stats.FlopData;
 import com.nate.model.entities.stats.KeyedHand;
 import com.nate.model.entities.stats.Statistic;
@@ -24,7 +25,7 @@ import static com.nate.util.scoring.impl.TexasScoreManager.getResults;
 
 public abstract class ScoreManager {
 
-    public static KeyedHand calcResults(Pair<Card> hand, Map<Statistic, Integer> stats) {
+     protected static FlopData calcResults(Pair<Card> hand, Map<Statistic, Integer> stats) {
         int totalRuns = stats.get(Statistic.NUMBER_OF_RUNS);
         Map<Statistic, Double> real = new HashMap<>();
         for (Map.Entry entry : stats.entrySet()) {
@@ -38,8 +39,17 @@ public abstract class ScoreManager {
 
             real.put((Statistic) entry.getKey(), percent);
         }
-        KeyedHand keyedHand = KeyedHand.of(hand.getFirst(), hand.getSecond(), FlopData.of(real));
-        return keyedHand;
+
+        return FlopData.of(real, hand);
+    }
+
+    protected static EquityData compileEquityData(Map<Pair<Card>, Integer> data, int ties) {
+         int total = 0;
+         for (Map.Entry entry : data.entrySet()) {
+                total += (int)entry.getValue();
+         }
+         total += ties;
+         return EquityData.of(data, ties, total);
     }
 
     public static void handleResults(ExecutorService pool, DataType type) {

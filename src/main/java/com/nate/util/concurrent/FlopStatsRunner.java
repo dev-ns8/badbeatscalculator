@@ -32,7 +32,7 @@ public class FlopStatsRunner implements Runnable {
     private void getStats() {
         Dealer dealer = Dealer.create();
         dealer.shuffle();
-        Util.handleHole(hand.toSet(), dealer);
+        Util.handleHole(hand, dealer);
         Hand holeFlop = FiveCardHand.of(hand.toSet(), dealer.flop(), false);
         // ---------------------------------
         Map<Statistic, Boolean> stats = TexasScoreUtil.flopStats(holeFlop);
